@@ -20,7 +20,6 @@ def create(request):
 def vote(request,pk):
     poll = Poll.objects.get(pk = pk)
     if request.method == 'POST':
-        # print(request.POST)
         selected_option = request.POST['poll']
         if selected_option == 'option1':
             poll.option_one_count = poll.option_one_count + 1
@@ -38,5 +37,5 @@ def vote(request,pk):
 
 def results(request,pk):
     poll = Poll.objects.get(pk = pk )
-    # print(poll)
     return render(request,'polls/results.html',{'poll': poll})
+
