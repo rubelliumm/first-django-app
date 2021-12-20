@@ -1,1 +1,1 @@
-web: waitress-serve --port=8000 Rubelliumm.wsgi:application
+web: gunicorn Rubelliumm.wsgi:application --log-file -
