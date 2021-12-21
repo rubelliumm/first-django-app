@@ -6,9 +6,9 @@ class Poll(models.Model):
     option_one = models.CharField(max_length=30)
     option_two = models.CharField(max_length=30)
     option_three = models.CharField(max_length=30)
-    option_one_count =models.IntegerField(default=0)
-    option_two_count =models.IntegerField(default=0)
-    option_three_count =models.IntegerField(default=0)
+    option_one_count = models.IntegerField(default=0)
+    option_two_count = models.IntegerField(default=0)
+    option_three_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.question
